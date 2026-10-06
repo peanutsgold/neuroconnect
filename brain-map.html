@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brain Map – NeuroConnect</title>
+  <meta name="description" content="NeuroConnect explains brain injury, its symptoms, related health problems, recovery, and where to find support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="apple-touch-icon" href="images/icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+  <!-- Emergency banner -->
+  <div class="alert-bar" role="alert">
+    <strong>Emergency?</strong> If someone has a head injury and is confused, vomiting, very sleepy, has a seizure, or has a worsening headache, call <strong>911</strong> (or your local emergency number) now.
+    <a href="symptoms.html#warning-signs">See warning signs</a>
+  </div>
+
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <img src="images/icon.png" alt="" class="logo-mark logo-light" width="40" height="40">
+        <img src="images/icon-dark.png" alt="" class="logo-mark logo-dark" width="40" height="40">
+        NeuroConnect
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">What is it?</a></li>
+        <li><a href="brain-map.html" class="active" aria-current="page">Brain map</a></li>
+        <li><a href="symptoms.html">Symptoms</a></li>
+        <li><a href="health.html">Health problems</a></li>
+        <li><a href="recovery.html">Recovery</a></li>
+        <li><a href="tracker.html">Tracker</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></g></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- Brain map -->
+    <section id="brain-map" class="section">
+      <div class="container">
+        <p class="eyebrow">Interactive</p>
+        <h2>Where it happens matters</h2>
+        <p class="section-intro">Each part of the brain has its own job. Select an area to see what it does and what can change if it is injured.</p>
+        <div class="brain-layout">
+          <div class="brain-figure">
+            <svg viewBox="0 0 400 300" class="brain-svg" role="img" aria-label="Side view of the brain showing its main regions">
+              <path class="region" data-region="frontal" tabindex="0" role="button" aria-label="Frontal lobe"
+                d="M60 170 C40 120 70 60 140 45 C170 40 190 42 200 45 L190 150 L120 185 C95 190 70 185 60 170 Z"/>
+              <path class="region" data-region="parietal" tabindex="0" role="button" aria-label="Parietal lobe"
+                d="M200 45 C250 45 300 65 320 100 L300 140 L190 150 Z"/>
+              <path class="region" data-region="occipital" tabindex="0" role="button" aria-label="Occipital lobe"
+                d="M320 100 C345 130 350 165 335 190 L290 190 L300 140 Z"/>
+              <path class="region" data-region="temporal" tabindex="0" role="button" aria-label="Temporal lobe"
+                d="M120 185 L190 150 L300 140 L290 190 C260 215 200 225 150 210 C130 205 120 195 120 185 Z"/>
+              <path class="region" data-region="cerebellum" tabindex="0" role="button" aria-label="Cerebellum"
+                d="M290 190 L335 190 C345 215 325 245 290 245 C260 245 245 225 255 210 Z"/>
+              <path class="region" data-region="brainstem" tabindex="0" role="button" aria-label="Brainstem"
+                d="M225 215 L255 210 C252 235 258 265 262 290 L236 290 C232 265 228 240 225 215 Z"/>
+            </svg>
+            <div class="brain-legend">
+              <button type="button" data-region="frontal">Frontal</button>
+              <button type="button" data-region="parietal">Parietal</button>
+              <button type="button" data-region="temporal">Temporal</button>
+              <button type="button" data-region="occipital">Occipital</button>
+              <button type="button" data-region="cerebellum">Cerebellum</button>
+              <button type="button" data-region="brainstem">Brainstem</button>
+            </div>
+          </div>
+          <div class="brain-info card" aria-live="polite">
+            <h3 id="region-title">Select an area</h3>
+            <p id="region-job">Click or tap a coloured region of the brain, or use the buttons below the picture.</p>
+            <div id="region-effects"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="pager container" aria-label="Page navigation">
+      <a href="about.html" class="pager-prev"><span>← Previous</span>What is it?</a>
+      <a href="symptoms.html" class="pager-next"><span>Next →</span>Symptoms</a>
+    </nav>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <img src="images/logo.png" alt="NeuroConnect" class="footer-logo logo-light" width="900" height="478">
+      <img src="images/logo-dark.png" alt="NeuroConnect" class="footer-logo logo-dark" width="900" height="478">
+      <p class="disclaimer"><strong>Disclaimer:</strong> NeuroConnect provides general information only and is not a substitute for professional medical advice, diagnosis, or treatment. Always talk to a qualified health professional about your situation.</p>
+      <p class="muted">&copy; <span id="year"></span> NeuroConnect</p>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

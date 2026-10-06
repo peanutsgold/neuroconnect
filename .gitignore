@@ -1,0 +1,7 @@
+# Local tools / editor files
+.claude/
+*~lock~
+
+# Design source files (not needed for the website)
+*.af
+images/logo-full.png

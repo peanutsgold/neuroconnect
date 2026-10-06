@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symptoms – NeuroConnect</title>
+  <meta name="description" content="NeuroConnect explains brain injury, its symptoms, related health problems, recovery, and where to find support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="apple-touch-icon" href="images/icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+  <!-- Emergency banner -->
+  <div class="alert-bar" role="alert">
+    <strong>Emergency?</strong> If someone has a head injury and is confused, vomiting, very sleepy, has a seizure, or has a worsening headache, call <strong>911</strong> (or your local emergency number) now.
+    <a href="symptoms.html#warning-signs">See warning signs</a>
+  </div>
+
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <img src="images/icon.png" alt="" class="logo-mark logo-light" width="40" height="40">
+        <img src="images/icon-dark.png" alt="" class="logo-mark logo-dark" width="40" height="40">
+        NeuroConnect
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">What is it?</a></li>
+        <li><a href="brain-map.html">Brain map</a></li>
+        <li><a href="symptoms.html" class="active" aria-current="page">Symptoms</a></li>
+        <li><a href="health.html">Health problems</a></li>
+        <li><a href="recovery.html">Recovery</a></li>
+        <li><a href="tracker.html">Tracker</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></g></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- Symptoms -->
+    <section id="symptoms" class="section alt">
+      <div class="container">
+        <p class="eyebrow">Signs to know</p>
+        <h2>Symptoms of brain injury</h2>
+        <p class="section-intro">Symptoms vary from person to person and may not show up straight away. Many are “invisible” to others.</p>
+
+        <div class="tabs" role="tablist" aria-label="Symptom categories">
+          <button role="tab" aria-selected="true" aria-controls="tab-physical" id="t-physical" class="tab active">Physical</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-thinking" id="t-thinking" class="tab">Thinking</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-emotional" id="t-emotional" class="tab">Emotional</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-sensory" id="t-sensory" class="tab">Senses</button>
+        </div>
+
+        <div class="tab-panel active" role="tabpanel" id="tab-physical" aria-labelledby="t-physical">
+          <ul class="pill-list">
+            <li>Headaches</li><li>Tiredness / fatigue</li><li>Dizziness</li><li>Nausea</li>
+            <li>Poor balance</li><li>Weakness on one side</li><li>Seizures</li><li>Sleep changes</li><li>Slurred speech</li>
+          </ul>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="tab-thinking" aria-labelledby="t-thinking" hidden>
+          <ul class="pill-list">
+            <li>Memory problems</li><li>Poor concentration</li><li>Slower thinking</li><li>Trouble finding words</li>
+            <li>Difficulty planning</li><li>Confusion</li><li>Trouble making decisions</li><li>Feeling “foggy”</li>
+          </ul>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="tab-emotional" aria-labelledby="t-emotional" hidden>
+          <ul class="pill-list">
+            <li>Irritability</li><li>Anxiety</li><li>Low mood / depression</li><li>Mood swings</li>
+            <li>Impulsiveness</li><li>Loss of motivation</li><li>Frustration</li><li>Changes in personality</li>
+          </ul>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="tab-sensory" aria-labelledby="t-sensory" hidden>
+          <ul class="pill-list">
+            <li>Blurred or double vision</li><li>Sensitivity to light</li><li>Sensitivity to noise</li>
+            <li>Ringing in ears (tinnitus)</li><li>Changes in taste or smell</li><li>Numbness or tingling</li>
+          </ul>
+        </div>
+
+        <div id="warning-signs" class="warning card">
+          <h3>⚠️ Get emergency help right away if someone has:</h3>
+          <div class="warning-grid">
+            <ul>
+              <li>A headache that gets worse and won’t go away</li>
+              <li>Repeated vomiting</li>
+              <li>A seizure or convulsions</li>
+              <li>Unusual drowsiness or can’t be woken</li>
+            </ul>
+            <ul>
+              <li>One pupil larger than the other</li>
+              <li>Slurred speech, weakness, or numbness</li>
+              <li>Growing confusion, agitation, or odd behaviour</li>
+              <li>Clear fluid or blood from the nose or ears</li>
+            </ul>
+          </div>
+          <p class="warning-cta">Call <strong>911</strong> or your local emergency number.</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="pager container" aria-label="Page navigation">
+      <a href="brain-map.html" class="pager-prev"><span>← Previous</span>Brain map</a>
+      <a href="health.html" class="pager-next"><span>Next →</span>Health problems</a>
+    </nav>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <img src="images/logo.png" alt="NeuroConnect" class="footer-logo logo-light" width="900" height="478">
+      <img src="images/logo-dark.png" alt="NeuroConnect" class="footer-logo logo-dark" width="900" height="478">
+      <p class="disclaimer"><strong>Disclaimer:</strong> NeuroConnect provides general information only and is not a substitute for professional medical advice, diagnosis, or treatment. Always talk to a qualified health professional about your situation.</p>
+      <p class="muted">&copy; <span id="year"></span> NeuroConnect</p>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
