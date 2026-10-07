@@ -283,3 +283,42 @@ function initTracker() {
 const toTop = $(".to-top");
 window.addEventListener("scroll", () => toTop.classList.toggle("show", window.scrollY > 600), { passive: true });
 toTop.addEventListener("click", () => window.scrollTo({ top: 0 }));
+
+// ===== Donate (donate page only) =====
+if ($("#donate-form")) initDonate();
+
+function initDonate() {
+  const form = $("#donate-form");
+  const amountField = $("#donate-amount");
+  const customInput = $("#custom-amount");
+  const button = $("#donate-btn");
+  const presets = $$(".amount");
+  const isConfigured = !form.merchant_id.value.startsWith("YOUR_");
+
+  if (new URLSearchParams(location.search).has("thanks")) $("#donate-thanks").hidden = false;
+
+  function setAmount(value) {
+    const amount = Number(value);
+    const valid = amount >= 10;
+    amountField.value = valid ? amount.toFixed(2) : "";
+    button.textContent = isConfigured
+      ? valid ? `Donate R${amount.toLocaleString("en-ZA")}` : "Enter at least R10"
+      : "Donations opening soon";
+    button.disabled = !isConfigured || !valid;
+  }
+
+  presets.forEach((btn) =>
+    btn.addEventListener("click", () => {
+      presets.forEach((b) => b.classList.toggle("active", b === btn));
+      customInput.value = "";
+      setAmount(btn.dataset.amount);
+    })
+  );
+
+  customInput.addEventListener("input", () => {
+    presets.forEach((b) => b.classList.remove("active"));
+    setAmount(customInput.value);
+  });
+
+  setAmount(100);
+}

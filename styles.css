@@ -369,3 +369,35 @@ img, svg { max-width: 100%; }
 }
 .emergency-numbers a { color: var(--danger); text-decoration: none; font-size: 1.15rem; margin-right: 6px; }
 .resource .phone { color: var(--text); font-weight: 600; margin-bottom: 0.6em; }
+
+/* ===== Donate ===== */
+.nav-links a.nav-donate { background: var(--primary); color: #fff; }
+.nav-links a.nav-donate:hover, .nav-links a.nav-donate.active { background: var(--primary); color: #fff; filter: brightness(1.1); }
+.donate-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
+.donate-uses { margin-bottom: 28px; }
+.donate-thanks { border: 2px solid var(--accent); margin-bottom: 20px; }
+.org-details dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; margin: 0; }
+.org-details dt { color: var(--muted); }
+.org-details dd { margin: 0; font-weight: 600; }
+.donate-form { display: grid; gap: 16px; position: sticky; top: 88px; }
+.donate-form h3 { margin: 0; }
+.amount-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.amount {
+  font: inherit; font-weight: 700; font-size: 1.05rem; padding: 14px 0;
+  border: 2px solid var(--border); border-radius: 12px; background: #fff; color: var(--text); cursor: pointer;
+}
+.amount:hover { border-color: var(--primary); }
+.amount.active { border-color: var(--primary); background: var(--primary-soft); color: var(--primary); }
+.custom-amount { display: grid; gap: 6px; font-weight: 500; font-size: 0.95rem; }
+.rand-input { display: flex; align-items: center; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.rand-input span { padding: 10px 12px; background: var(--primary-soft); font-weight: 700; color: var(--primary); }
+.rand-input input { flex: 1; border: 0; padding: 10px 12px; font: inherit; min-width: 0; outline: none; }
+.rand-input:focus-within { border-color: var(--primary); }
+.donate-btn { width: 100%; font-size: 1.1rem; padding: 16px; }
+.donate-btn:disabled { background: var(--muted); cursor: not-allowed; transform: none; filter: none; }
+.secure-note { font-size: 0.85rem; text-align: center; margin: 0; }
+@media (max-width: 960px) {
+  .donate-layout { grid-template-columns: 1fr; }
+  .donate-form { position: static; }
+  .nav-links a.nav-donate { text-align: center; }
+}

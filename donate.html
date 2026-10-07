@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate – NeuroConnect</title>
+  <meta name="description" content="NeuroConnect explains brain injury, its symptoms, related health problems, recovery, and where to find support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="apple-touch-icon" href="images/icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+  <!-- Emergency banner -->
+  <div class="alert-bar" role="alert">
+    <strong>Emergency?</strong> If someone has a head injury and is confused, vomiting, very sleepy, has a seizure, or has a worsening headache, call <strong>10177</strong> (or your local emergency number) now.
+    <a href="symptoms.html#warning-signs">See warning signs</a>
+  </div>
+
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <img src="images/icon.png" alt="" class="logo-mark" width="40" height="40">
+        NeuroConnect
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">What is it?</a></li>
+        <li><a href="brain-map.html">Brain map</a></li>
+        <li><a href="symptoms.html">Symptoms</a></li>
+        <li><a href="health.html">Health problems</a></li>
+        <li><a href="recovery.html">Recovery</a></li>
+        <li><a href="tracker.html">Tracker</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="donate.html" class="active nav-donate" aria-current="page">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- Donate -->
+    <section id="donate" class="section">
+      <div class="container donate-layout">
+        <div>
+          <p class="eyebrow">Support our work</p>
+          <h2>Donate to NeuroConnect</h2>
+          <p class="section-intro">NeuroConnect gives free, plain-language information about brain injury to people across South Africa. Your donation helps keep it free for everyone who needs it.</p>
+
+          <div id="donate-thanks" class="card donate-thanks" hidden>
+            <h3>💙 Thank you for your donation!</h3>
+            <p>Your support means a lot. PayFast will email you a receipt.</p>
+          </div>
+
+          <h3 class="sub-heading">Your donation helps us</h3>
+          <ul class="check-list donate-uses">
+            <li>Keep the website online and free to use</li>
+            <li>Write new pages and keep information up to date</li>
+            <li>Reach more families affected by brain injury and stroke</li>
+            <li>Share South African support services and helplines</li>
+          </ul>
+
+          <div class="card org-details">
+            <h3>Organisation details</h3>
+            <dl>
+              <dt>Registered name</dt><dd id="org-name">NeuroConnect</dd>
+              <dt>Company registration no.</dt><dd id="org-reg">To be added</dd>
+            </dl>
+          </div>
+        </div>
+
+        <!--
+          ===== PAYFAST SETTINGS =====
+          Replace the two values below with the Merchant ID and Merchant Key
+          from your PayFast dashboard (Settings → Integration).
+          Until they are filled in, the button shows "Donations opening soon".
+        -->
+        <form id="donate-form" class="card donate-form" action="https://www.payfast.co.za/eng/process" method="post">
+          <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
+          <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
+          <input type="hidden" name="item_name" value="Donation to NeuroConnect">
+          <input type="hidden" name="return_url" value="https://peanutsgold.github.io/neuroconnect/donate.html?thanks=1">
+          <input type="hidden" name="cancel_url" value="https://peanutsgold.github.io/neuroconnect/donate.html">
+          <input type="hidden" name="amount" id="donate-amount" value="100.00">
+
+          <h3>Choose an amount</h3>
+          <div class="amount-grid" role="radiogroup" aria-label="Donation amount">
+            <button type="button" class="amount" data-amount="50">R50</button>
+            <button type="button" class="amount active" data-amount="100">R100</button>
+            <button type="button" class="amount" data-amount="250">R250</button>
+            <button type="button" class="amount" data-amount="500">R500</button>
+          </div>
+          <label class="custom-amount">Or enter your own amount
+            <span class="rand-input"><span>R</span><input type="number" id="custom-amount" min="10" step="1" placeholder="Other amount"></span>
+          </label>
+
+          <button type="submit" id="donate-btn" class="btn btn-primary donate-btn">Donate R100</button>
+          <p class="muted secure-note">🔒 Secure payment by PayFast — card, Instant EFT, SnapScan and more.</p>
+        </form>
+      </div>
+    </section>
+
+    <nav class="pager container" aria-label="Page navigation">
+      <a href="support.html" class="pager-prev"><span>← Previous</span>Support</a>
+      <span></span>
+    </nav>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <img src="images/logo.png" alt="NeuroConnect" class="footer-logo" width="900" height="478">
+      <p class="disclaimer"><strong>Disclaimer:</strong> NeuroConnect provides general information only and is not a substitute for professional medical advice, diagnosis, or treatment. Always talk to a qualified health professional about your situation.</p>
+      <p class="muted">&copy; <span id="year"></span> NeuroConnect</p>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
