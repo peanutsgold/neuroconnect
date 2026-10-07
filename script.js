@@ -14,17 +14,6 @@ function store(key, value) {
 // ===== Footer year =====
 $("#year").textContent = new Date().getFullYear();
 
-// ===== Dark mode =====
-const root = document.documentElement;
-const savedTheme = store("nc-theme");
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-root.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
-
-$(".theme-toggle").addEventListener("click", () => {
-  root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
-  store("nc-theme", root.dataset.theme);
-});
-
 // ===== Mobile nav =====
 const navToggle = $(".nav-toggle");
 const navLinks = $("#nav-links");
