@@ -359,3 +359,13 @@ img, svg { max-width: 100%; }
   .pager { grid-template-columns: 1fr; }
   .pager-next { grid-column: 1; }
 }
+
+/* ===== South Africa support ===== */
+.emergency-numbers { border: 2px solid var(--danger); margin-bottom: 24px; }
+.emergency-numbers h3 { color: var(--danger); }
+.emergency-numbers ul {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px 24px;
+}
+.emergency-numbers a { color: var(--danger); text-decoration: none; font-size: 1.15rem; margin-right: 6px; }
+.resource .phone { color: var(--text); font-weight: 600; margin-bottom: 0.6em; }
