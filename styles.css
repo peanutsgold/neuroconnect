@@ -401,3 +401,18 @@ img, svg { max-width: 100%; }
   .donate-form { position: static; }
   .nav-links a.nav-donate { text-align: center; }
 }
+
+/* ===== Follow us ===== */
+.social { margin: 8px 0 24px; }
+.social-title { font-weight: 700; margin-bottom: 10px; }
+.social-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.social-links a {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; border: 1px solid var(--border); border-radius: 999px;
+  color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.95rem;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+}
+.social-links a:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
+.social-links a.pending { opacity: 0.55; cursor: default; }
+.social-links a.pending:hover { border-color: var(--border); color: var(--text); transform: none; }
+.social-soon { font-size: 0.85rem; margin: 10px 0 0; }
