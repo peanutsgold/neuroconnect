@@ -8,3 +8,6 @@ images/logo-full.png
 
 # Backups
 *.zip
+
+# Social media kit (kept locally, not part of the website)
+social-media/
