@@ -324,12 +324,10 @@ function initDonate() {
 }
 
 // ===== Follow us =====
-// Paste your page links here once the accounts are set up, e.g.
-// facebook: "https://www.facebook.com/neuroconnect"
+// Paste your Facebook page link here once it is live, e.g.
+// facebook: "https://www.facebook.com/neuroconnectsa"
 const SOCIAL_LINKS = {
   facebook: "",
-  instagram: "",
-  tiktok: "",
 };
 
 $$("[data-social]").forEach((link) => {
